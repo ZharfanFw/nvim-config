@@ -3,13 +3,9 @@ return { -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		-- event = 'InsertEnter',
 		dependencies = {
-			-- Snippet Engine & its associated nvim-cmp source
 			{
 				"L3MON4D3/LuaSnip",
 				build = (function()
-					-- Build Step is needed for regex support in snippets
-					-- This step is not supported in many windows environments
-					-- Remove the below condition to re-enable on windows
 					if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
 						return
 					end
@@ -17,15 +13,9 @@ return { -- Autocompletion
 				end)(),
 			},
 			"saadparwaiz1/cmp_luasnip",
-
-			-- Adds other completion capabilities.
-			--  nvim-cmp does not ship with all sources by default. They are split
-			--  into multiple repos for maintenance purposes.
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-
-			-- Adds a number of user-friendly snippets
 			"rafamadriz/friendly-snippets",
 		},
 		config = function()
@@ -74,9 +64,9 @@ return { -- Autocompletion
 				--     documentation = cmp.config.window.bordered(),
 				-- },
 				mapping = cmp.mapping.preset.insert({
-					["<C-j>"] = cmp.mapping.select_next_item(), -- Select the [n]ext item
+					["<C-j>"] = cmp.mapping.select_next_item(), -- Select hext item
 					["<C-k>"] = cmp.mapping.select_prev_item(), -- Select the [p]revious item
-					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept the completion with Enter.
+					["<CR>"] = cmp.mapping.confirm({ select = true }), -- th Enter.
 					["<C-c>"] = cmp.mapping.complete({}), -- Manually trigger a completion from nvim-cmp.
 
 					-- Think of <c-l> as moving to the right of your snippet expansion.

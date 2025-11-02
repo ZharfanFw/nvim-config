@@ -15,6 +15,7 @@ rtp:prepend(lazypath)
 require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.colorscheme"),
+	require("plugins.comment-nvim"),
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
@@ -25,5 +26,7 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.alpha"),
 	require("plugins.indent-blankline"),
+	require("plugins.note-setup"),
+	require("plugins.live-preview"),
 	require("plugins.misc"),
 })

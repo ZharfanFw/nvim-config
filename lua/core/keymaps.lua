@@ -13,6 +13,8 @@ vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
 vim.keymap.set("n", "<leader>q", "<cmd> q <CR>", opts)
 vim.keymap.set("n", "<leader>wq", "<cmd> wq <CR>", opts)
 
+vim.keymap.set("i", "jj", "<Esc>", opts)
+
 -- Delete single character without copying into clipboard
 vim.keymap.set("n", "x", '"_x', opts)
 
